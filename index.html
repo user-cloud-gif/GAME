@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Audio Player</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .player-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player-container">
+        <h3>My Audio Track</h3>
+        
+        <!-- The 'controls' attribute adds Play, Pause, Volume, and Seek bar automatically -->
+        <audio controls>
+            <!-- Replace 'my-audio.mp3' with your actual file name -->
+            <source src="my-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <p><small>Upload an MP3 file to this folder to play.</small></p>
+    </div>
+
+</body>
+</html>
