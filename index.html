@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html>
-<body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#222;">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch & Download Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
 
-    <!-- Change 'video.mp4' to your file name -->
-    <video width="80%" controls autoplay muted>
-        <source src="video.mp4" type="video/mp4">
-        Browser not supported.
-    </video>
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 5px;
+            background-color: #000;
+            outline: none;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>My Video</h2>
+        
+        <!-- Video Player -->
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Download Button -->
+        <!-- 'href' points to your file, 'download' suggests the filename when saving -->
+        <a href="video.mp4" download="video.mp4" class="download-btn">
+            ⬇️ Download Video
+        </a>
+    </div>
 
 </body>
 </html>
